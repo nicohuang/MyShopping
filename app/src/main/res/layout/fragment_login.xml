@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_logo" />
+
+   <EditText
+        android:id="@+id/account_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:paddingLeft="45dp"
+        android:ems="10" />
+
+    <!--layout_alignBaseline：与某个控件基线对齐  -->
+    <TextView 
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/account_edt"
+        android:text="账号:"
+        android:layout_alignLeft="@+id/account_edt"
+        android:layout_marginLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/pwd_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="45dp"
+        android:ems="10"
+        android:inputType="numberPassword"
+        />
+    
+    
+        <!--layout_alignBaseline：与某个控件基线对齐  -->
+    <TextView 
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/pwd_edt"
+        android:text="密码:"
+        android:layout_alignLeft="@+id/pwd_edt"
+        android:layout_marginLeft="5dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageButton1"
+        android:layout_marginLeft="26dp"
+        android:onClick="register"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:background="@drawable/register_button_select" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pwd_edt"
+        android:layout_below="@+id/pwd_edt"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_button_select"
+        android:onClick="login" />
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!--收件人 -->
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignRight="@+id/address_txt"
+        android:text="收 货 人:" />
+
+    <EditText
+        android:id="@+id/name_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/name_txt"
+        android:layout_marginLeft="5dp"
+        android:ems="10" />
+     <!--电话 -->
+    <TextView
+        android:id="@+id/phone_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_txt"
+        android:layout_alignRight="@+id/address_txt"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="5dp"
+        android:text="手     机:" />
+    
+        <EditText
+        android:id="@+id/phone_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_below="@+id/name_edt"
+        android:layout_toRightOf="@+id/phone_txt"
+        android:layout_marginLeft="5dp"
+        android:ems="10" />
+         <!--省市区 -->
+        <TextView
+        android:id="@+id/city_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_txt"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignRight="@+id/address_txt"
+        android:text="省 市 区:" />
+    
+        <EditText
+        android:id="@+id/city_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_below="@+id/phone_edt"
+        android:layout_toRightOf="@+id/city_txt"
+        android:layout_marginLeft="5dp"
+        android:ems="10" />
+         <!--详细地址 -->
+          <TextView
+        android:id="@+id/address_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city_txt"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
+        android:text="详细地址:" />
+    
+        <EditText
+        android:id="@+id/address_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_below="@+id/city_edt"
+        android:layout_toRightOf="@+id/address_txt"
+        android:layout_marginLeft="5dp"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/myregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_edt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:background="@mipmap/product_detail_shop_selected"
+        android:text="添加" />
+
+</RelativeLayout>

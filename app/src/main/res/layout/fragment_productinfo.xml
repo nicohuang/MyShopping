@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#D90000" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="商品详情"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="男童圆领毛衣KGME081101" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="价格:" />
+
+        <TextView
+            android:id="@+id/price_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/price"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/price"
+            android:text="￥181.00" />
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="商品评分:" />
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/grade"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/grade" />
+
+        <TextView
+            android:id="@+id/count_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grade"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="数量:" />
+
+        <EditText
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/grade"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/count_txt"
+            android:background="@mipmap/edit_text"
+            android:ems="2"
+            android:inputType="number"
+            android:text="1"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/limit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/count_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="库存:" />
+
+        <TextView
+            android:id="@+id/limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/limit_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/limit_txt"
+            android:text="18" />
+
+        <Button
+            android:id="@+id/toincart"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/count_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/button_long_normal"
+            android:text="加入购货车"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/storeup"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/count_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/toincart"
+            android:background="@mipmap/button_long_selected"
+            android:text="收藏"
+            android:textColor="#969696" />
+    </RelativeLayout>
+
+</LinearLayout>

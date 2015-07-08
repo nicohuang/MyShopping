@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/list_address_selector" 
+    >
+
+    <TextView
+        android:id="@+id/txt_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="收货地址" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_tag"
+        android:layout_below="@+id/txt_tag"
+        android:layout_marginTop="10dp"
+        android:text="null"
+        android:textColor="#969696" />
+
+    <TextView
+        android:id="@+id/txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_name"
+        android:layout_below="@+id/txt_name"
+        android:layout_marginTop="10dp"
+        android:text="null"
+        android:textColor="#969696" />
+
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_phone"
+        android:layout_below="@+id/txt_phone"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="null"
+        android:textColor="#969696" />
+    
+    <ImageView 
+        android:id="@+id/image_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ok"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible"
+       	></ImageView>
+       	
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainFragment" >
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#D90000" >
+
+        <TextView
+            android:id="@+id/txt_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加地址"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative1" >
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="收  件  人:" />
+
+        <EditText
+            android:id="@+id/name_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/txt_name"
+            android:hint="必填"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/txt_phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:text="手        机:" />
+
+        <EditText
+            android:id="@+id/phonenumber_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_edt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txt_phonenumber"
+            android:ems="10"
+            android:hint="必填"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/txt_fixedtel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_phonenumber"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:text="固定电话:" />
+
+        <EditText
+            android:id="@+id/fixedtel_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phonenumber_edt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txt_fixedtel"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/txt_areaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_fixedtel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:text="省  市  区:" />
+
+        <EditText
+            android:id="@+id/areaid_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fixedtel_edt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txt_areaid"
+            android:hint="必填"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/txt_areadetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_areaid"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="详细地址:" />
+
+        <EditText
+            android:id="@+id/areadetail_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/areaid_edt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txt_areadetail"
+            android:hint="必填"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/txt_zipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_areadetail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="邮        编:" />
+
+        <EditText
+            android:id="@+id/zipcode_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/areadetail_edt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txt_zipcode"
+            android:hint="必填"
+            android:inputType="number"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zipcode_edt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/product_detail_shop_selected"
+            android:text="添加" />
+    </RelativeLayout>
+
+</RelativeLayout>

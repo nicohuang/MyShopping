@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment" >
+
+    <!-- 当购物车为空时显示 -->
+
+    <RelativeLayout
+        android:id="@+id/relativelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#D90000" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/null_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativelayout1"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/image_shopcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@mipmap/shopcar" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_shopcart"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="50dp"
+            android:text="您的购物车中没有商品！快去挑件喜欢的商品吧！"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_tobuy"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buy_btn_selector"
+            android:text="随便逛逛"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <!-- 当购物车不为空时显示 -->
+
+    <RelativeLayout
+        android:id="@+id/nonull_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativelayout1" >
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#D0D1D0" >
+
+            <TextView
+                android:id="@+id/count_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="商品数量  :"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/count_txt"
+                android:layout_marginRight="20dp"
+                android:text="2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/money_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/count_txt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="商品总金额   (元):"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/money_txt"
+                android:layout_marginRight="20dp"
+                android:text="200"
+                android:textColor="#D90000"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buy_btn"
+            android:layout_below="@+id/relative" >
+        </ListView>
+
+        <Button
+            android:id="@+id/buy_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/buy_btn_selector"
+            android:text="立即购买" />
+    </RelativeLayout>
+
+</RelativeLayout>

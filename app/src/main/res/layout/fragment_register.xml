@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    
+
+   <EditText
+        android:id="@+id/account_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:paddingLeft="45dp"
+        android:ems="10" />
+
+    <!--layout_alignBaseline：与某个控件基线对齐  -->
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/account_edt"
+        android:layout_alignLeft="@+id/account_edt"
+        android:layout_marginLeft="5dp"
+        android:text="账号:" />
+
+    <EditText
+        android:id="@+id/pwd_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/account_edt"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="45dp"
+        android:ems="10"
+        android:inputType="numberPassword"
+        />
+    
+    
+        <!--layout_alignBaseline：与某个控件基线对齐  -->
+    <TextView 
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/pwd_edt"
+        android:text="密码:"
+        android:layout_alignLeft="@+id/pwd_edt"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/textView1"/>
+    
+        <EditText
+        android:id="@+id/repwd_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pwd_edt"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="65dp"
+        android:inputType="numberPassword"
+        android:ems="10"
+        />
+    
+    
+        <!--layout_alignBaseline：与某个控件基线对齐  -->
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/repwd_edt"
+        android:layout_alignBottom="@+id/repwd_edt"
+        android:layout_alignLeft="@+id/textView1"
+        android:text="确认密码:" />
+    
+    <Button 
+        android:id="@+id/myregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repwd_edt"
+        android:background="@mipmap/product_detail_shop_selected"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="注册"
+        />
+
+</RelativeLayout>

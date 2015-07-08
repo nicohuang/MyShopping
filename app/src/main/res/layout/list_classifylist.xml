@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    tools:context=".MainFragment" >
+
+    <ImageView
+        android:id="@+id/pic"
+        style="@style/ListTheme"
+        android:src="@mipmap/home_classify_01" />
+
+    <TextView
+        android:id="@+id/txt_title"
+               android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/pic"
+        android:text="限时抢购"
+        android:textColor="#D90000" />
+    
+     <TextView
+        android:id="@+id/txt_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/pic"
+        android:text="孕产营养品/奶粉"
+        android:layout_below="@+id/txt_title"
+        android:textColor="#969696" />
+
+    <ImageView
+        android:id="@+id/image2"
+        style="@style/ListTheme"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/arrow" />
+
+</RelativeLayout>
