@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import hwz.com.myshopping.R;
+import hwz.com.myshopping.fragment.address.AddressListFragment;
 import hwz.com.myshopping.util.HttpClientApplication;
 
 public class MoreFragment extends Fragment{

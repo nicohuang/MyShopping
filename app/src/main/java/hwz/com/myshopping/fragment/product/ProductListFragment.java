@@ -1,4 +1,4 @@
-package hwz.com.myshopping.fragment;
+package hwz.com.myshopping.fragment.product;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,12 +21,14 @@ import java.io.IOException;
 
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
+import hwz.com.myshopping.fragment.BaseFragment;
 import hwz.com.myshopping.model.ProductListBase;
 import hwz.com.myshopping.net.HttpUtil;
 import hwz.com.myshopping.util.ImageLoaderHelper;
 
 
-public class ProductListFragment extends BaseFragment {
+public class ProductListFragment extends BaseFragment
+{
 
 	private GridView gridView;
 	private String url= MyUrl.URLHEAD+MyUrl.PRODUCTLIST;//"http://10.0.2.2:8080/ECServer/productlist?id=";

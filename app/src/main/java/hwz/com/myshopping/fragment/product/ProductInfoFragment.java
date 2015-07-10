@@ -1,4 +1,4 @@
-package hwz.com.myshopping.fragment;
+package hwz.com.myshopping.fragment.product;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,6 +28,7 @@ import java.util.ArrayList;
 
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
+import hwz.com.myshopping.fragment.LoginFragment;
 import hwz.com.myshopping.model.CartInfo;
 import hwz.com.myshopping.model.ProductInfoBase;
 import hwz.com.myshopping.dao.CartDao;

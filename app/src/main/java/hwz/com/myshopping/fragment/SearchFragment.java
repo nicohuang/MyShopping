@@ -40,6 +40,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
+import hwz.com.myshopping.fragment.product.ProductInfoFragment;
 import hwz.com.myshopping.model.SearchHotWork;
 import hwz.com.myshopping.model.SearchProduct;
 import hwz.com.myshopping.dao.CartDao;

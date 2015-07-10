@@ -2,9 +2,6 @@ package hwz.com.myshopping.util;
 
 import android.app.Application;
 
-import com.example.shopping.fragment.InvoiceFragment;
-import com.loopj.android.http.AsyncHttpClient;
-
 public class HttpClientApplication extends Application {
 	public String username="";//用户名
 	public String password="";//密码

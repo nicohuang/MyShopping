@@ -1,4 +1,4 @@
-package hwz.com.myshopping.fragment;
+package hwz.com.myshopping.fragment.checkout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
+import hwz.com.myshopping.fragment.MainFragment;
 import hwz.com.myshopping.util.HttpClientApplication;
 
 public class CheckOutSuccessFragment extends Fragment{

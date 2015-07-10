@@ -10,7 +10,7 @@ import hwz.com.myshopping.fragment.ClassifyFragment;
 import hwz.com.myshopping.fragment.MainFragment;
 import hwz.com.myshopping.fragment.MoreFragment;
 import hwz.com.myshopping.fragment.SearchFragment;
-import hwz.com.myshopping.fragment.ShoppingCartFragment;
+import hwz.com.myshopping.fragment.shoppingcart.ShoppingCartFragment;
 
 public class HomePageAdapter extends FragmentPagerAdapter{
 	private ArrayList<Fragment> pages=new ArrayList<Fragment>();

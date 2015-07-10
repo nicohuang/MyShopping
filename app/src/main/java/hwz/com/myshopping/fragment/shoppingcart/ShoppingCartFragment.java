@@ -1,4 +1,4 @@
-package hwz.com.myshopping.fragment;
+package hwz.com.myshopping.fragment.shoppingcart;
 
 
 import android.app.AlertDialog;
@@ -23,8 +23,12 @@ import android.widget.Toast;
 import java.util.List;
 
 import hwz.com.myshopping.R;
-import hwz.com.myshopping.model.CartInfo;
 import hwz.com.myshopping.dao.CartDao;
+import hwz.com.myshopping.fragment.ClassifyFragment;
+import hwz.com.myshopping.fragment.LoginFragment;
+import hwz.com.myshopping.fragment.checkout.CheckOutFragment;
+import hwz.com.myshopping.fragment.checkout.checkinfo.CheckInfo;
+import hwz.com.myshopping.model.CartInfo;
 import hwz.com.myshopping.util.HttpClientApplication;
 
 public class ShoppingCartFragment extends Fragment{
@@ -40,7 +44,7 @@ public class ShoppingCartFragment extends Fragment{
 	private TextView money;//金额
 	private Button buy_btn;//提交按钮
 	private Button btn_tobuy;
-	private HttpClientApplication application;
+    private HttpClientApplication application;
 	@Override
 	public void onDestroyView() {//移除布局
 		super.onDestroyView();
@@ -120,8 +124,8 @@ public void onStart() {
 				FragmentTransaction ft=getFragmentManager().beginTransaction();
 				CheckOutFragment fragment=new CheckOutFragment();
 				//bundle传递总金和数量
-				application.myCount=myCount;
-				application.myMoney=myMoney;
+				CheckInfo.myCount=myCount;
+                CheckInfo.myMoney=myMoney;
 				ft.replace(R.id.fragmentcontent,fragment);
 				ft.addToBackStack(null);
 				ft.commit();

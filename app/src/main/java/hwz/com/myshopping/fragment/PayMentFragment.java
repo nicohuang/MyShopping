@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
+import hwz.com.myshopping.fragment.checkout.CheckOutFragment;
 import hwz.com.myshopping.util.HttpClientApplication;
 
 public class PayMentFragment extends BaseFragment {

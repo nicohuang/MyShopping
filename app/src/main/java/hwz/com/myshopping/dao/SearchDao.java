@@ -77,7 +77,7 @@ public class SearchDao
     }
 
     /**
-     *
+     *添加搜索提示
      */
     public void hintinser() {
         SQLiteDatabase db=mMyOpenHelper.getWritableDatabase();

@@ -1,4 +1,4 @@
-package hwz.com.myshopping.fragment;
+package hwz.com.myshopping.fragment.checkout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -26,6 +26,11 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
+import hwz.com.myshopping.fragment.DeliveryFragment;
+import hwz.com.myshopping.fragment.InvoiceFragment;
+import hwz.com.myshopping.fragment.PayMentFragment;
+import hwz.com.myshopping.fragment.address.AddressListFragment;
+import hwz.com.myshopping.fragment.checkout.checkinfo.CheckInfo;
 import hwz.com.myshopping.model.CartInfo;
 import hwz.com.myshopping.dao.CartDao;
 import hwz.com.myshopping.util.HttpClientApplication;
@@ -35,40 +40,42 @@ public class CheckOutFragment extends Fragment
     private View view;
     //收货地址
     @InjectView(R.id.txt_name)
-    TextView txt_name;
+    private TextView txt_name;
     @InjectView(R.id.txt_phone)
-    TextView txt_phone;
+    private TextView txt_phone;
     @InjectView(R.id.txt_address)
-    TextView txt_address;
+    private TextView txt_address;
     @InjectView(R.id.relative_name)
-    RelativeLayout relative_name;
+    private RelativeLayout relative_name;
     //支付方式
     @InjectView(R.id.txt_howcheckout)
-    TextView txt_howcheckout;
+    private TextView txt_howcheckout;
     @InjectView(R.id.relative_checktype)
-    RelativeLayout relative_checktype;
+    private RelativeLayout relative_checktype;
     //送货方式
     @InjectView(R.id.txt_send)
-    TextView txt_send;
+    private TextView txt_send;
     //送货时间
     @InjectView(R.id.txt_delivery)
-    TextView txt_delivery;
+    private TextView txt_delivery;
     @InjectView(R.id.relative_delivery)
-    RelativeLayout relative_delivery;
+    private RelativeLayout relative_delivery;
     //索取发票
     @InjectView(R.id.txt_invoice)
-    TextView txt_invoice;
+    private TextView txt_invoice;
     @InjectView(R.id.relative_invoice)
-    RelativeLayout relative_invoice;
+    private RelativeLayout relative_invoice;
     //商品数量
     @InjectView(R.id.txt_count)
-    TextView txt_count;
+    private TextView txt_count;
     //付款金额
     @InjectView(R.id.txt_money)
-    TextView txt_money;
+    private TextView txt_money;
     //结账按钮
     @InjectView(R.id.btn_checkout)
-    TextView btn_checkout;
+    private TextView btn_checkout;
+
+    private HttpClientApplication application;
 
     //bundle传递数据
     @Override
@@ -92,24 +99,24 @@ public class CheckOutFragment extends Fragment
         if (view == null)
         {
             view = inflater.inflate(R.layout.fragment_checkout, null);
+            application = (HttpClientApplication)getActivity().getApplication();
             //奶油刀注解库
             ButterKnife.inject(this, view);
             //获取购货车传递过来的数据
 
-            final HttpClientApplication application = (HttpClientApplication) getActivity().getApplication();
             //显示地址信息
-            txt_name.setText(application.name);
-            txt_phone.setText(application.phone);
-            txt_address.setText(application.address);
+            txt_name.setText(CheckInfo.name);
+            txt_phone.setText(CheckInfo.phone);
+            txt_address.setText(CheckInfo.address);
             //显示支付方式
-            txt_howcheckout.setText(application.paytype);
+            txt_howcheckout.setText(CheckInfo.paytype);
             //显示送货时间
-            txt_delivery.setText(application.deliverytime);
+            txt_delivery.setText(CheckInfo.deliverytime);
             //显示订单信息
-            txt_count.setText(application.myCount + "");
-            txt_money.setText(application.myMoney + "");
+            txt_count.setText(CheckInfo.myCount + "");
+            txt_money.setText(CheckInfo.myMoney + "");
             //索取发票
-            txt_invoice.setText(application.invoiceinfo + "");
+            txt_invoice.setText(CheckInfo.invoiceinfo + "");
             //获取地址
             relative_name.setOnClickListener(new OnClickListener()
             {
@@ -119,7 +126,7 @@ public class CheckOutFragment extends Fragment
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
                     AddressListFragment addressListFragment = new AddressListFragment();
                     ft.replace(R.id.fragmentcontent, addressListFragment);
-                    application.addressid = 1;
+                    CheckInfo.addressid = 1;
                     ft.addToBackStack(null);
                     ft.commit();
                 }
@@ -132,7 +139,7 @@ public class CheckOutFragment extends Fragment
                 {
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
                     PayMentFragment payMentFragment = new PayMentFragment();
-                    application.addressid = 1;
+                    CheckInfo.addressid = 1;
                     ft.replace(R.id.fragmentcontent, payMentFragment);
                     ft.addToBackStack(null);
                     ft.commit();
@@ -172,16 +179,16 @@ public class CheckOutFragment extends Fragment
                     //获取全局变量
                     String username = application.username;
                     String password = application.password;
-                    if (application.address.equals(""))
+                    if (CheckInfo.address.equals(""))
                     {
                         Toast.makeText(getActivity(), "请选择地址", Toast.LENGTH_SHORT).show();
-                    } else if (application.deliverytime.equals(""))
+                    } else if (CheckInfo.deliverytime.equals(""))
                     {
                         Toast.makeText(getActivity(), "请选择收件时间", Toast.LENGTH_SHORT).show();
-                    } else if (application.paytype.equals(""))
+                    } else if (CheckInfo.paytype.equals(""))
                     {
                         Toast.makeText(getActivity(), "请选择支付方式", Toast.LENGTH_SHORT).show();
-                    } else if (application.invoiceinfo.equals(""))
+                    } else if (CheckInfo.invoiceinfo.equals(""))
                     {
                         Toast.makeText(getActivity(), "请选择发票类型", Toast.LENGTH_SHORT).show();
                     } else
@@ -233,7 +240,7 @@ public class CheckOutFragment extends Fragment
                                                     //获取订单信息
                                                     JSONObject object2 = new JSONObject(orderinfo);
                                                     String orderid = object2.getString("orderid");
-                                                    application.orderid = orderid;
+                                                    CheckInfo.orderid = orderid;
                                                     //判断时候提交订成功
                                                     if (response.equals("orderdetail"))
                                                     {
@@ -270,13 +277,13 @@ public class CheckOutFragment extends Fragment
                                         //商品ID:数量|商品ID:数量
                                         form.put("sku", shopping);
                                         //地址簿ID
-                                        form.put("addressid", application.addressid);
+                                        form.put("addressid", CheckInfo.addressid);
                                         //支付方式
-                                        form.put("paymentid", application.payid);
+                                        form.put("paymentid", CheckInfo.payid);
                                         //送货时间
-                                        form.put("deliveryid", application.deliveryid);
+                                        form.put("deliveryid", CheckInfo.deliveryid);
                                         //发票类型
-                                        form.put("invoicetype", application.invoiceid);
+                                        form.put("invoicetype", CheckInfo.invoiceid);
                                         //发票标题
                                         form.put("invoicetitle", "毕业设计");
                                         //发票内容
