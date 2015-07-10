@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
-import hwz.com.myshopping.bean.Category;
+import hwz.com.myshopping.model.Category;
 
 public class ClassifyItemFragment extends BaseFragment {
 	@InjectView(R.id.list)

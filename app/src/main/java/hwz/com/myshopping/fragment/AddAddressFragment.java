@@ -13,7 +13,7 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
-import hwz.com.myshopping.bean.AddressInfo;
+import hwz.com.myshopping.model.AddressInfo;
 import hwz.com.myshopping.dao.CartDao;
 import hwz.com.myshopping.util.HttpClientApplication;
 

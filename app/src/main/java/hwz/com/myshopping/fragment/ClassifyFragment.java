@@ -20,8 +20,8 @@ import java.util.ArrayList;
 
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.Category;
-import hwz.com.myshopping.bean.CategoryBase;
+import hwz.com.myshopping.model.Category;
+import hwz.com.myshopping.model.CategoryBase;
 import hwz.com.myshopping.net.HttpUtil;
 
 

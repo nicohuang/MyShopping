@@ -28,8 +28,8 @@ import java.util.ArrayList;
 
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.CartInfo;
-import hwz.com.myshopping.bean.ProductInfoBase;
+import hwz.com.myshopping.model.CartInfo;
+import hwz.com.myshopping.model.ProductInfoBase;
 import hwz.com.myshopping.dao.CartDao;
 import hwz.com.myshopping.net.HttpUtil;
 import hwz.com.myshopping.util.HttpClientApplication;

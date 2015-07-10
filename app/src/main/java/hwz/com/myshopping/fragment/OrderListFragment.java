@@ -26,7 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.OrderListBase;
+import hwz.com.myshopping.model.OrderListBase;
 import hwz.com.myshopping.util.HttpClientApplication;
 
 public class OrderListFragment extends BaseFragment {

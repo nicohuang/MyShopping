@@ -21,7 +21,7 @@ import java.io.IOException;
 
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.ProductListBase;
+import hwz.com.myshopping.model.ProductListBase;
 import hwz.com.myshopping.net.HttpUtil;
 import hwz.com.myshopping.util.ImageLoaderHelper;
 

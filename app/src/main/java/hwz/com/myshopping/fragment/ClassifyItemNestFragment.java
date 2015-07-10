@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import hwz.com.myshopping.R;
-import hwz.com.myshopping.bean.Category;
+import hwz.com.myshopping.model.Category;
 
 public class ClassifyItemNestFragment extends BaseFragment {
 	private ListView list;

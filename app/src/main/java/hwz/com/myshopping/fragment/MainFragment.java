@@ -33,8 +33,8 @@ import butterknife.InjectView;
 import butterknife.InjectViews;
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.Home;
-import hwz.com.myshopping.bean.Home_banner;
+import hwz.com.myshopping.model.Home;
+import hwz.com.myshopping.model.Home_banner;
 import hwz.com.myshopping.net.HttpUtil;
 import hwz.com.myshopping.util.ImageLoaderHelper;
 

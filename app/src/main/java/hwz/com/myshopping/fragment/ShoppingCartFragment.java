@@ -23,7 +23,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import hwz.com.myshopping.R;
-import hwz.com.myshopping.bean.CartInfo;
+import hwz.com.myshopping.model.CartInfo;
 import hwz.com.myshopping.dao.CartDao;
 import hwz.com.myshopping.util.HttpClientApplication;
 

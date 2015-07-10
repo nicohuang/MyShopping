@@ -1,4 +1,4 @@
-package hwz.com.myshopping.bean;
+package hwz.com.myshopping.model;
 
 import java.io.Serializable;
 

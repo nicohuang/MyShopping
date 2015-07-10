@@ -29,7 +29,7 @@ import java.util.List;
 
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.AddressInfo;
+import hwz.com.myshopping.model.AddressInfo;
 import hwz.com.myshopping.dao.CartDao;
 import hwz.com.myshopping.util.HttpClientApplication;
 

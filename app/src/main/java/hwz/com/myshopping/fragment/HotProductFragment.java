@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import hwz.com.myshopping.R;
 import hwz.com.myshopping.activity.MyUrl;
-import hwz.com.myshopping.bean.NewProductBase;
+import hwz.com.myshopping.model.NewProductBase;
 import hwz.com.myshopping.net.HttpUtil;
 import hwz.com.myshopping.util.ImageLoaderHelper;
 
