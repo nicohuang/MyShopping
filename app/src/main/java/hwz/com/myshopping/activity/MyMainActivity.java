@@ -18,7 +18,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 import hwz.com.myshopping.R;
-import hwz.com.myshopping.adapter.HomePageAdapter;
+import hwz.com.myshopping.activity.adapter.HomePageAdapter;
 
 public class MyMainActivity extends FragmentActivity {
 	private int[] btn_image=new int[]{
@@ -35,7 +35,7 @@ public class MyMainActivity extends FragmentActivity {
 	private int currPage =0;//初始页
 	private int width=80;
 	private ViewPager viewPager;
-	private FrameLayout fragmentcontent;
+	public static FrameLayout fragmentcontent;
     public static File cacheDir;
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -46,6 +46,7 @@ public class MyMainActivity extends FragmentActivity {
 		//----------------
 		viewPager=(ViewPager) findViewById(R.id.tabcontent);
 		fragmentcontent=(FrameLayout) findViewById(R.id.fragmentcontent);
+
 		//获取屏幕宽度
 		wManager=getWindowManager();
 		Display display=wManager.getDefaultDisplay();

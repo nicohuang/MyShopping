@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class SQLOpenHelper extends SQLiteOpenHelper
 {
-    private static int version=9;//数据库版本
+    private static int version=1;//数据库版本
 
     //创建数据库
     public SQLOpenHelper(Context context)
